@@ -46,7 +46,7 @@
                                 <rect key="frame" x="257" y="75" width="30" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="UP">
-                                    <color key="titleColor" red="0.46509492320000001" green="0.46509492320000001" blue="0.46509492320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="signUpButtonTapWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rwN-2q-9ko"/>

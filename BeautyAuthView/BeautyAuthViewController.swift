@@ -31,6 +31,7 @@ class BeautyAuthViewController: UIViewController {
     
     func setupView() {
         singInButton.transform = CGAffineTransform(scaleX: 1.81, y: 1.81)
+        singUpButton.titleLabel?.textColor = UIColor(red: 119.00/255.00, green: 119.00/255.00, blue: 119.00/255.00, alpha: 1)
     }
 
     
