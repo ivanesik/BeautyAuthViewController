@@ -19,6 +19,9 @@ class BeautyAuthViewController: UIViewController {
 // MARK: - Props
     var mode: Mode = .signIn
 
+    @IBOutlet var singInButton: UIButton!
+    @IBOutlet var singUpButton: UIButton!
+    
     
 // MARK: - Initialization
     override func viewDidLoad() {
@@ -27,23 +30,25 @@ class BeautyAuthViewController: UIViewController {
     }
     
     func setupView() {
-        
+        singInButton.transform = CGAffineTransform(scaleX: 1.81, y: 1.81)
     }
 
     
 // MARK: - ACTIONS
     @IBAction func signInButtonTap(sender: UIButton){
         if mode != .signIn {
-            
+            Animations.animateSizeUp(button: singInButton)
+            Animations.animateSizeDown(button: singUpButton)
+            mode = .signIn
         }
-        mode = .signIn
     }
     
     @IBAction func signUpButtonTap(sender: UIButton){
         if mode != .signUp {
-            
+            Animations.animateSizeUp(button: singUpButton)
+            Animations.animateSizeDown(button: singInButton)
+            mode = .signUp
         }
-        mode = .signUp
     }
     
 

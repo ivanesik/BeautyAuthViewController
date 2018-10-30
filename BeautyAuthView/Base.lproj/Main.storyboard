@@ -33,8 +33,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iL-1d-gb7">
-                                <rect key="frame" x="181" y="74" width="45" height="40"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <rect key="frame" x="181" y="74" width="30" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="IN">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -43,10 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s6-sv-P0T">
-                                <rect key="frame" x="257" y="92" width="30" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="pH1-29-Dac"/>
-                                </constraints>
+                                <rect key="frame" x="257" y="75" width="30" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="UP">
                                     <color key="titleColor" red="0.46509492320000001" green="0.46509492320000001" blue="0.46509492320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,6 +68,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="singInButton" destination="9iL-1d-gb7" id="78b-15-LKJ"/>
+                        <outlet property="singUpButton" destination="5s6-sv-P0T" id="BkY-cs-eYH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
