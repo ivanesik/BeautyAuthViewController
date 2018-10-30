@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84F954CF218864E100E747AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F954CE218864E100E747AB /* AppDelegate.swift */; };
-		84F954D1218864E100E747AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F954D0218864E100E747AB /* ViewController.swift */; };
+		84F954D1218864E100E747AB /* BeautyAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F954D0218864E100E747AB /* BeautyAuthViewController.swift */; };
 		84F954D4218864E100E747AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F954D2218864E100E747AB /* Main.storyboard */; };
 		84F954D6218864E300E747AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F954D5218864E300E747AB /* Assets.xcassets */; };
 		84F954D9218864E300E747AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F954D7218864E300E747AB /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		84F954CB218864E100E747AB /* BeautyAuthView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyAuthView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F954CE218864E100E747AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84F954D0218864E100E747AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84F954D0218864E100E747AB /* BeautyAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyAuthViewController.swift; sourceTree = "<group>"; };
 		84F954D3218864E100E747AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84F954D5218864E300E747AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84F954D8218864E300E747AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				84F954CE218864E100E747AB /* AppDelegate.swift */,
-				84F954D0218864E100E747AB /* ViewController.swift */,
+				84F954D0218864E100E747AB /* BeautyAuthViewController.swift */,
 				84F954D2218864E100E747AB /* Main.storyboard */,
 				84F954D5218864E300E747AB /* Assets.xcassets */,
 				84F954D7218864E300E747AB /* LaunchScreen.storyboard */,
@@ -135,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F954D1218864E100E747AB /* ViewController.swift in Sources */,
+				84F954D1218864E100E747AB /* BeautyAuthViewController.swift in Sources */,
 				84F954CF218864E100E747AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
