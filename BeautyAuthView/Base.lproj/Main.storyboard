@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iL-1d-gb7">
-                                <rect key="frame" x="181" y="74" width="30" height="40"/>
+                                <rect key="frame" x="181" y="74.5" width="30" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="IN">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s6-sv-P0T">
-                                <rect key="frame" x="257" y="75" width="30" height="39"/>
+                                <rect key="frame" x="257" y="74.5" width="30" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="UP">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -60,15 +60,16 @@
                             <constraint firstItem="c2u-DL-hjI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="BBb-Ql-Nk1"/>
                             <constraint firstItem="5s6-sv-P0T" firstAttribute="leading" secondItem="c2u-DL-hjI" secondAttribute="trailing" constant="101" id="IJr-J2-fWO"/>
                             <constraint firstItem="9iL-1d-gb7" firstAttribute="leading" secondItem="c2u-DL-hjI" secondAttribute="trailing" constant="25" id="U0n-fG-Ypx"/>
-                            <constraint firstItem="9iL-1d-gb7" firstAttribute="height" secondItem="c2u-DL-hjI" secondAttribute="height" id="Vp0-Aw-RsA"/>
                             <constraint firstItem="uMD-Ra-5iD" firstAttribute="leading" secondItem="c2u-DL-hjI" secondAttribute="trailing" constant="80" id="gco-Sp-vQW"/>
                             <constraint firstItem="uMD-Ra-5iD" firstAttribute="bottom" secondItem="c2u-DL-hjI" secondAttribute="bottom" id="pO1-ob-PHY"/>
-                            <constraint firstItem="5s6-sv-P0T" firstAttribute="bottom" secondItem="c2u-DL-hjI" secondAttribute="bottom" id="pYz-wN-bdL"/>
-                            <constraint firstItem="9iL-1d-gb7" firstAttribute="bottom" secondItem="c2u-DL-hjI" secondAttribute="bottom" id="s7r-bF-GvM"/>
+                            <constraint firstItem="9iL-1d-gb7" firstAttribute="centerY" secondItem="c2u-DL-hjI" secondAttribute="centerY" id="stE-tZ-dki"/>
+                            <constraint firstItem="5s6-sv-P0T" firstAttribute="centerY" secondItem="c2u-DL-hjI" secondAttribute="centerY" id="t6C-zB-mer"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="signInLeftConstraint" destination="U0n-fG-Ypx" id="zzd-52-HjQ"/>
+                        <outlet property="signUpLeftConstraint" destination="IJr-J2-fWO" id="cPY-cn-wpW"/>
                         <outlet property="singInButton" destination="9iL-1d-gb7" id="78b-15-LKJ"/>
                         <outlet property="singUpButton" destination="5s6-sv-P0T" id="BkY-cs-eYH"/>
                     </connections>

@@ -11,17 +11,21 @@ import UIKit
 
 class Animations {
 
-    static func animateSizeUp(button: UIButton) {
-        UIView.animate(withDuration: 1) {
-            button.transform = CGAffineTransform(scaleX: 1.81, y: 1.81)
+    static func animateSetActiveMode(button: UIButton, leftConstraint: NSLayoutConstraint, view: UIView) {
+        UIView.animate(withDuration: 0.5) {
             button.titleLabel?.textColor = UIColor.black
+            button.transform = CGAffineTransform(scaleX: 2, y: 2)
+            leftConstraint.constant = 25
+            view.layoutIfNeeded()
         }
     }
     
-    static func animateSizeDown(button: UIButton) {
-        UIView.animate(withDuration: 1) {
-            button.transform = CGAffineTransform(scaleX: 1, y: 1)
+    static func animateSetUnactiveMode(button: UIButton, leftConstraint: NSLayoutConstraint, view: UIView) {
+        UIView.animate(withDuration: 0.5) {
             button.titleLabel?.textColor = UIColor(red: 119.00/255.00, green: 119.00/255.00, blue: 119.00/255.00, alpha: 1)
+            button.transform = CGAffineTransform(scaleX: 1, y: 1)
+            leftConstraint.constant = 95
+            view.layoutIfNeeded()
         }
     }
     

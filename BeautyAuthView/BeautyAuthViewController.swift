@@ -22,6 +22,9 @@ class BeautyAuthViewController: UIViewController {
     @IBOutlet var singInButton: UIButton!
     @IBOutlet var singUpButton: UIButton!
     
+    @IBOutlet var signInLeftConstraint: NSLayoutConstraint!
+    @IBOutlet var signUpLeftConstraint: NSLayoutConstraint!
+    
     
 // MARK: - Initialization
     override func viewDidLoad() {
@@ -30,7 +33,7 @@ class BeautyAuthViewController: UIViewController {
     }
     
     func setupView() {
-        singInButton.transform = CGAffineTransform(scaleX: 1.81, y: 1.81)
+        singInButton.transform = CGAffineTransform(scaleX: 2, y: 2)
         singUpButton.titleLabel?.textColor = UIColor(red: 119.00/255.00, green: 119.00/255.00, blue: 119.00/255.00, alpha: 1)
     }
 
@@ -38,16 +41,16 @@ class BeautyAuthViewController: UIViewController {
 // MARK: - ACTIONS
     @IBAction func signInButtonTap(sender: UIButton){
         if mode != .signIn {
-            Animations.animateSizeUp(button: singInButton)
-            Animations.animateSizeDown(button: singUpButton)
+            Animations.animateSetActiveMode(button: singInButton, leftConstraint: signInLeftConstraint, view: self.view)
+            Animations.animateSetUnactiveMode(button: singUpButton, leftConstraint: signUpLeftConstraint, view: self.view)
             mode = .signIn
         }
     }
     
     @IBAction func signUpButtonTap(sender: UIButton){
         if mode != .signUp {
-            Animations.animateSizeUp(button: singUpButton)
-            Animations.animateSizeDown(button: singInButton)
+            Animations.animateSetActiveMode(button: singUpButton, leftConstraint: signUpLeftConstraint, view: self.view)
+            Animations.animateSetUnactiveMode(button: singInButton, leftConstraint: signInLeftConstraint, view: self.view)
             mode = .signUp
         }
     }
