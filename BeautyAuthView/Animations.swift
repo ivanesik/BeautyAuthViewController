@@ -35,7 +35,7 @@ class Animations {
     static func animateTextFieldsUprise(textfields: [TextFieldTop], view: UIView) {
         var durationCount: Double = 0
         for textfield in textfields {
-            UIView.animate(withDuration: 0.3, delay: (durationCount * 0.1), options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 0.5, delay: (durationCount * 0.08), options: .curveEaseInOut, animations: {
                 textfield.topConstraint.constant -= 350
                 textfield.textField.alpha = 1
                 view.layoutIfNeeded()
@@ -47,7 +47,7 @@ class Animations {
     static func animateTextFieldsLeaving(textfields: [TextFieldTop], view: UIView) {
         var durationCount: Double = 0
         for textfield in textfields {
-            UIView.animate(withDuration: 0.3, delay: (durationCount * 0.1), options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 0.5, delay: (durationCount * 0.08), options: .curveEaseInOut, animations: {
                 textfield.topConstraint.constant += 350
                 textfield.textField.alpha = 0
                 view.layoutIfNeeded()

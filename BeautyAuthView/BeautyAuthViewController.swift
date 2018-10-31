@@ -19,6 +19,7 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
 // MARK: - Props
     var mode: Mode = .signIn
     var singInTextFields: [TextFieldTop] = []
+    var singUpTextFields: [TextFieldTop] = []
 
     @IBOutlet var singInButton: UIButton!
     @IBOutlet var singUpButton: UIButton!
@@ -34,6 +35,13 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var signInUserNameTextFieldTopConstraint: NSLayoutConstraint!
     @IBOutlet var signInPasswordTextFieldTopConstraint: NSLayoutConstraint!
     
+    @IBOutlet var signUpUserNameTextField: UITextField!
+    @IBOutlet var signUpPasswordTextField: UITextField!
+    @IBOutlet var signUpConfirmPasswordTextField: UITextField!
+    @IBOutlet var signUpUserNameTextFieldTopConstraint: NSLayoutConstraint!
+    @IBOutlet var signUpPasswordTextFieldTopConstraint: NSLayoutConstraint!
+    @IBOutlet var signUpConfirmPasswordTextFieldTopConstraint: NSLayoutConstraint!
+    
     
 // MARK: - Initialization
     override func viewDidLoad() {
@@ -44,11 +52,23 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
         signInPasswordTextField.delegate = self
         singInTextFields = [(textField: signInUserNameTextField, topConstraint: signInUserNameTextFieldTopConstraint),
                             (textField: signInPasswordTextField, topConstraint: signInPasswordTextFieldTopConstraint)]
+        singUpTextFields = [(textField: signUpUserNameTextField, topConstraint: signUpUserNameTextFieldTopConstraint),
+                            (textField: signUpPasswordTextField, topConstraint: signUpPasswordTextFieldTopConstraint),
+                            (textField: signUpConfirmPasswordTextField, topConstraint: signUpConfirmPasswordTextFieldTopConstraint)]
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        for textfield in singUpTextFields {
+            textfield.textField.alpha = 0
+        }
     }
     
     func setupView() {
         singInButton.transform = CGAffineTransform(scaleX: 2, y: 2)
         singUpButton.titleLabel?.textColor = UIColor(red: 119.00/255.00, green: 119.00/255.00, blue: 119.00/255.00, alpha: 1)
+        /*for textfield in singUpTextFields {
+            textfield.textField.alpha = 0
+        }*/
     }
 
     
@@ -58,7 +78,7 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
             Animations.animateSetActiveMode(button: singInButton, leftConstraint: signInLeftConstraint, view: self.view)
             Animations.animateSetUnactiveMode(button: singUpButton, leftConstraint: signUpLeftConstraint, view: self.view)
             Animations.animateTextFieldsUprise(textfields: singInTextFields, view: self.view)
-            
+            Animations.animateTextFieldsLeaving(textfields: singUpTextFields, view: self.view)
             mode = .signIn
         }
     }
@@ -67,7 +87,7 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
         if mode != .signUp {
             Animations.animateSetActiveMode(button: singUpButton, leftConstraint: signUpLeftConstraint, view: self.view)
             Animations.animateSetUnactiveMode(button: singInButton, leftConstraint: signInLeftConstraint, view: self.view)
-            
+            Animations.animateTextFieldsUprise(textfields: singUpTextFields, view: self.view)
             Animations.animateTextFieldsLeaving(textfields: singInTextFields, view: self.view)
             mode = .signUp
         }
