@@ -76,13 +76,13 @@
                             <constraint firstItem="3aA-5r-JsF" firstAttribute="leading" secondItem="ffb-Gg-3CD" secondAttribute="leading" id="1Xh-zC-3aP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xyn-dI-q7X" secondAttribute="bottom" id="6UX-dJ-D5g"/>
                             <constraint firstItem="c2u-DL-hjI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="87D-BB-77i"/>
+                            <constraint firstItem="3aA-5r-JsF" firstAttribute="top" secondItem="c2u-DL-hjI" secondAttribute="bottom" constant="97" id="AgV-X4-Ct6"/>
                             <constraint firstItem="uMD-Ra-5iD" firstAttribute="height" secondItem="c2u-DL-hjI" secondAttribute="height" id="As1-oz-BCJ"/>
                             <constraint firstItem="c2u-DL-hjI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="BBb-Ql-Nk1"/>
                             <constraint firstItem="5s6-sv-P0T" firstAttribute="leading" secondItem="c2u-DL-hjI" secondAttribute="trailing" constant="101" id="IJr-J2-fWO"/>
                             <constraint firstItem="Xyn-dI-q7X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P1t-u7-Cv9"/>
                             <constraint firstItem="ffb-Gg-3CD" firstAttribute="leading" secondItem="c2u-DL-hjI" secondAttribute="leading" id="Qt2-cd-Jqp"/>
                             <constraint firstItem="ffb-Gg-3CD" firstAttribute="top" secondItem="c2u-DL-hjI" secondAttribute="bottom" constant="38" id="RyK-vP-giv"/>
-                            <constraint firstItem="3aA-5r-JsF" firstAttribute="top" secondItem="ffb-Gg-3CD" secondAttribute="bottom" constant="29" id="STi-uD-T6E"/>
                             <constraint firstItem="9iL-1d-gb7" firstAttribute="leading" secondItem="c2u-DL-hjI" secondAttribute="trailing" constant="25" id="U0n-fG-Ypx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xyn-dI-q7X" secondAttribute="trailing" id="WD3-Cc-HGq"/>
                             <constraint firstItem="uMD-Ra-5iD" firstAttribute="leading" secondItem="c2u-DL-hjI" secondAttribute="trailing" constant="80" id="gco-Sp-vQW"/>
@@ -102,7 +102,9 @@
                         <outlet property="backgroundImageView" destination="Xyn-dI-q7X" id="FL5-kX-c8G"/>
                         <outlet property="signInLeftConstraint" destination="U0n-fG-Ypx" id="zzd-52-HjQ"/>
                         <outlet property="signInPasswordTextField" destination="3aA-5r-JsF" id="6ni-76-dxJ"/>
+                        <outlet property="signInPasswordTextFieldTopConstraint" destination="AgV-X4-Ct6" id="K8c-X4-id9"/>
                         <outlet property="signInUserNameTextField" destination="ffb-Gg-3CD" id="OsS-iF-9OI"/>
+                        <outlet property="signInUserNameTextFieldTopConstraint" destination="RyK-vP-giv" id="Pv2-dh-3qe"/>
                         <outlet property="signUpLeftConstraint" destination="IJr-J2-fWO" id="cPY-cn-wpW"/>
                         <outlet property="singInButton" destination="9iL-1d-gb7" id="78b-15-LKJ"/>
                         <outlet property="singUpButton" destination="5s6-sv-P0T" id="BkY-cs-eYH"/>

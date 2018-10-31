@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias TextFieldTop = (textField: UITextField, topConstraint: NSLayoutConstraint)
+
 
 class Animations {
 
@@ -26,6 +28,29 @@ class Animations {
             button.transform = CGAffineTransform(scaleX: 1, y: 1)
             leftConstraint.constant = 95
             view.layoutIfNeeded()
+        }
+    }
+    
+    
+    static func animateTextFieldsUprise(textfields: [TextFieldTop], view: UIView) {
+        var durationCount: Double = 0
+        for textfield in textfields {
+            UIView.animate(withDuration: 0.3, delay: (durationCount * 0.1), options: .curveEaseInOut, animations: {
+                textfield.topConstraint.constant -= 350
+                view.layoutIfNeeded()
+            }, completion: { (finished) in  })
+            durationCount += 1
+        }
+    }
+    
+    static func animateTextFieldsLeaving(textfields: [TextFieldTop], view: UIView) {
+        var durationCount: Double = 0
+        for textfield in textfields {
+            UIView.animate(withDuration: 0.3, delay: (durationCount * 0.1), options: .curveEaseInOut, animations: {
+                textfield.topConstraint.constant += 350
+                view.layoutIfNeeded()
+            }, completion: { (finished) in  })
+            durationCount += 1
         }
     }
     

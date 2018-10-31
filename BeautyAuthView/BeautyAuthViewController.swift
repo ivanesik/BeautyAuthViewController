@@ -18,6 +18,7 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
 
 // MARK: - Props
     var mode: Mode = .signIn
+    var singInTextFields: [TextFieldTop] = []
 
     @IBOutlet var singInButton: UIButton!
     @IBOutlet var singUpButton: UIButton!
@@ -30,6 +31,8 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var signInUserNameTextField: UITextField!
     @IBOutlet var signInPasswordTextField: UITextField!
+    @IBOutlet var signInUserNameTextFieldTopConstraint: NSLayoutConstraint!
+    @IBOutlet var signInPasswordTextFieldTopConstraint: NSLayoutConstraint!
     
     
 // MARK: - Initialization
@@ -39,6 +42,8 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
         
         signInUserNameTextField.delegate = self
         signInPasswordTextField.delegate = self
+        singInTextFields = [(textField: signInUserNameTextField, topConstraint: signInUserNameTextFieldTopConstraint),
+                            (textField: signInPasswordTextField, topConstraint: signInPasswordTextFieldTopConstraint)]
     }
     
     func setupView() {
@@ -52,6 +57,8 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
         if mode != .signIn {
             Animations.animateSetActiveMode(button: singInButton, leftConstraint: signInLeftConstraint, view: self.view)
             Animations.animateSetUnactiveMode(button: singUpButton, leftConstraint: signUpLeftConstraint, view: self.view)
+            Animations.animateTextFieldsUprise(textfields: singInTextFields, view: self.view)
+            
             mode = .signIn
         }
     }
@@ -60,6 +67,8 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
         if mode != .signUp {
             Animations.animateSetActiveMode(button: singUpButton, leftConstraint: signUpLeftConstraint, view: self.view)
             Animations.animateSetUnactiveMode(button: singInButton, leftConstraint: signInLeftConstraint, view: self.view)
+            
+            Animations.animateTextFieldsLeaving(textfields: singInTextFields, view: self.view)
             mode = .signUp
         }
     }
