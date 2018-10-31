@@ -37,6 +37,7 @@ class Animations {
         for textfield in textfields {
             UIView.animate(withDuration: 0.3, delay: (durationCount * 0.1), options: .curveEaseInOut, animations: {
                 textfield.topConstraint.constant -= 350
+                textfield.textField.alpha = 1
                 view.layoutIfNeeded()
             }, completion: { (finished) in  })
             durationCount += 1
@@ -48,6 +49,7 @@ class Animations {
         for textfield in textfields {
             UIView.animate(withDuration: 0.3, delay: (durationCount * 0.1), options: .curveEaseInOut, animations: {
                 textfield.topConstraint.constant += 350
+                textfield.textField.alpha = 0
                 view.layoutIfNeeded()
             }, completion: { (finished) in  })
             durationCount += 1
