@@ -42,14 +42,17 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var signUpPasswordTextFieldTopConstraint: NSLayoutConstraint!
     @IBOutlet var signUpConfirmPasswordTextFieldTopConstraint: NSLayoutConstraint!
     
+    @IBOutlet var enterButtonTopConstarain: NSLayoutConstraint!
+    
     
 // MARK: - Initialization
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
-        
         signInUserNameTextField.delegate = self
         signInPasswordTextField.delegate = self
+        signUpUserNameTextField.delegate = self
+        signUpPasswordTextField.delegate = self
+        signUpConfirmPasswordTextField.delegate = self
         singInTextFields = [(textField: signInUserNameTextField, topConstraint: signInUserNameTextFieldTopConstraint),
                             (textField: signInPasswordTextField, topConstraint: signInPasswordTextFieldTopConstraint)]
         singUpTextFields = [(textField: signUpUserNameTextField, topConstraint: signUpUserNameTextFieldTopConstraint),
@@ -58,44 +61,45 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        for textfield in singUpTextFields {
-            textfield.textField.alpha = 0
-        }
+        setupView()
     }
     
     func setupView() {
         singInButton.transform = CGAffineTransform(scaleX: 2, y: 2)
         singUpButton.titleLabel?.textColor = UIColor(red: 119.00/255.00, green: 119.00/255.00, blue: 119.00/255.00, alpha: 1)
-        /*for textfield in singUpTextFields {
+        for textfield in singUpTextFields {
             textfield.textField.alpha = 0
-        }*/
+        }
     }
 
     
 // MARK: - ACTIONS
     @IBAction func signInButtonTap(sender: UIButton){
         if mode != .signIn {
+            closeKeyBoard()
             Animations.animateSetActiveMode(button: singInButton, leftConstraint: signInLeftConstraint, view: self.view)
             Animations.animateSetUnactiveMode(button: singUpButton, leftConstraint: signUpLeftConstraint, view: self.view)
             Animations.animateTextFieldsUprise(textfields: singInTextFields, view: self.view)
             Animations.animateTextFieldsLeaving(textfields: singUpTextFields, view: self.view)
+            Animations.animateEnterButtonUprise(buttonTopConstraint: enterButtonTopConstarain, view: self.view)
             mode = .signIn
         }
     }
     
     @IBAction func signUpButtonTap(sender: UIButton){
         if mode != .signUp {
+            closeKeyBoard()
             Animations.animateSetActiveMode(button: singUpButton, leftConstraint: signUpLeftConstraint, view: self.view)
             Animations.animateSetUnactiveMode(button: singInButton, leftConstraint: signInLeftConstraint, view: self.view)
             Animations.animateTextFieldsUprise(textfields: singUpTextFields, view: self.view)
             Animations.animateTextFieldsLeaving(textfields: singInTextFields, view: self.view)
+            Animations.animateEnterButtonDown(buttonTopConstraint: enterButtonTopConstarain, view: self.view)
             mode = .signUp
         }
     }
     
     @IBAction func viewTap(sender: UIControl) {
-        signInUserNameTextField.resignFirstResponder()
-        signInPasswordTextField.resignFirstResponder()
+        closeKeyBoard()
     }
     
 // MARK: - TextField Delegate
@@ -114,6 +118,15 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
             self.view.layoutIfNeeded()
         }
         return true
+    }
+    
+// MARK: - Help
+    private func closeKeyBoard(){
+        signInUserNameTextField.resignFirstResponder()
+        signInPasswordTextField.resignFirstResponder()
+        signUpUserNameTextField.resignFirstResponder()
+        signUpPasswordTextField.resignFirstResponder()
+        signUpConfirmPasswordTextField.resignFirstResponder()
     }
     
 

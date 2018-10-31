@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountins" translatesAutoresizingMaskIntoConstraints="NO" id="Xyn-dI-q7X">
-                                <rect key="frame" x="0.0" y="367" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="372" width="375" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="PaL-T2-FHK"/>
                                 </constraints>
@@ -88,11 +88,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJG-AW-q0o">
+                                <rect key="frame" x="267" y="254" width="59" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="ENTER">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3aA-5r-JsF" firstAttribute="leading" secondItem="ffb-Gg-3CD" secondAttribute="leading" id="1Xh-zC-3aP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xyn-dI-q7X" secondAttribute="bottom" id="6UX-dJ-D5g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xyn-dI-q7X" secondAttribute="bottom" constant="-5" id="6UX-dJ-D5g"/>
                             <constraint firstItem="c2u-DL-hjI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="87D-BB-77i"/>
                             <constraint firstItem="fAW-TC-WXS" firstAttribute="trailing" secondItem="ffb-Gg-3CD" secondAttribute="trailing" id="8Ce-BH-rCU"/>
                             <constraint firstItem="3aA-5r-JsF" firstAttribute="top" secondItem="c2u-DL-hjI" secondAttribute="bottom" constant="100" id="AgV-X4-Ct6"/>
@@ -106,7 +113,9 @@
                             <constraint firstItem="ffb-Gg-3CD" firstAttribute="top" secondItem="c2u-DL-hjI" secondAttribute="bottom" constant="40" id="RyK-vP-giv"/>
                             <constraint firstItem="9iL-1d-gb7" firstAttribute="leading" secondItem="c2u-DL-hjI" secondAttribute="trailing" constant="25" id="U0n-fG-Ypx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xyn-dI-q7X" secondAttribute="trailing" id="WD3-Cc-HGq"/>
+                            <constraint firstItem="NJG-AW-q0o" firstAttribute="trailing" secondItem="ffb-Gg-3CD" secondAttribute="trailing" id="Zg4-op-MYD"/>
                             <constraint firstItem="vcK-te-x9v" firstAttribute="trailing" secondItem="ffb-Gg-3CD" secondAttribute="trailing" id="bgw-y2-bfH"/>
+                            <constraint firstItem="NJG-AW-q0o" firstAttribute="top" secondItem="c2u-DL-hjI" secondAttribute="bottom" constant="140" id="bwH-pm-e1r"/>
                             <constraint firstItem="vcK-te-x9v" firstAttribute="leading" secondItem="ffb-Gg-3CD" secondAttribute="leading" id="dBn-S6-Ozu"/>
                             <constraint firstItem="fAW-TC-WXS" firstAttribute="leading" secondItem="ffb-Gg-3CD" secondAttribute="leading" id="eHL-eV-bAF"/>
                             <constraint firstItem="anG-sP-SPn" firstAttribute="leading" secondItem="ffb-Gg-3CD" secondAttribute="leading" id="eRo-nj-k5v"/>
@@ -127,6 +136,7 @@
                     <connections>
                         <outlet property="backgroundImageHeightConstraint" destination="PaL-T2-FHK" id="INC-p5-K4L"/>
                         <outlet property="backgroundImageView" destination="Xyn-dI-q7X" id="FL5-kX-c8G"/>
+                        <outlet property="enterButtonTopConstarain" destination="bwH-pm-e1r" id="soP-VR-pHO"/>
                         <outlet property="signInLeftConstraint" destination="U0n-fG-Ypx" id="zzd-52-HjQ"/>
                         <outlet property="signInPasswordTextField" destination="3aA-5r-JsF" id="6ni-76-dxJ"/>
                         <outlet property="signInPasswordTextFieldTopConstraint" destination="AgV-X4-Ct6" id="K8c-X4-id9"/>

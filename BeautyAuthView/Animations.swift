@@ -56,5 +56,19 @@ class Animations {
         }
     }
     
+    static func animateEnterButtonUprise(buttonTopConstraint: NSLayoutConstraint, view: UIView) {
+        UIView.animate(withDuration: 0.5) {
+            buttonTopConstraint.constant -= 60
+            view.layoutIfNeeded()
+        }
+    }
+    
+    static func animateEnterButtonDown(buttonTopConstraint: NSLayoutConstraint, view: UIView) {
+        UIView.animate(withDuration: 0.5) {
+            buttonTopConstraint.constant += 60
+            view.layoutIfNeeded()
+        }
+    }
+    
     
 }
