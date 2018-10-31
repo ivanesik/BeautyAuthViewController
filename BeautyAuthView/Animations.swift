@@ -16,7 +16,7 @@ class Animations {
     static func animateSetActiveMode(button: UIButton, leftConstraint: NSLayoutConstraint, view: UIView) {
         UIView.animate(withDuration: 0.5) {
             button.titleLabel?.textColor = UIColor.black
-            button.transform = CGAffineTransform(scaleX: 2, y: 2)
+            button.transform = CGAffineTransform(scaleX: 1, y: 1)
             leftConstraint.constant = 25
             view.layoutIfNeeded()
         }
@@ -25,7 +25,7 @@ class Animations {
     static func animateSetUnactiveMode(button: UIButton, leftConstraint: NSLayoutConstraint, view: UIView) {
         UIView.animate(withDuration: 0.5) {
             button.titleLabel?.textColor = UIColor(red: 119.00/255.00, green: 119.00/255.00, blue: 119.00/255.00, alpha: 1)
-            button.transform = CGAffineTransform(scaleX: 1, y: 1)
+            button.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
             leftConstraint.constant = 95
             view.layoutIfNeeded()
         }
@@ -35,8 +35,8 @@ class Animations {
     static func animateTextFieldsUprise(textfields: [TextFieldTop], view: UIView) {
         var durationCount: Double = 0
         for textfield in textfields {
-            UIView.animate(withDuration: 0.5, delay: (durationCount * 0.08), options: .curveEaseInOut, animations: {
-                textfield.topConstraint.constant -= 350
+            UIView.animate(withDuration: 0.5, delay: (durationCount * 0.04), options: .curveEaseInOut, animations: {
+                textfield.topConstraint.constant -= 250
                 textfield.textField.alpha = 1
                 view.layoutIfNeeded()
             }, completion: { (finished) in  })
@@ -46,9 +46,9 @@ class Animations {
     
     static func animateTextFieldsLeaving(textfields: [TextFieldTop], view: UIView) {
         var durationCount: Double = 0
-        for textfield in textfields {
-            UIView.animate(withDuration: 0.5, delay: (durationCount * 0.08), options: .curveEaseInOut, animations: {
-                textfield.topConstraint.constant += 350
+        for textfield in textfields.reversed() {
+            UIView.animate(withDuration: 0.5, delay: (durationCount * 0.04), options: .curveEaseInOut, animations: {
+                textfield.topConstraint.constant += 250
                 textfield.textField.alpha = 0
                 view.layoutIfNeeded()
             }, completion: { (finished) in  })
@@ -64,7 +64,7 @@ class Animations {
     }
     
     static func animateEnterButtonDown(buttonTopConstraint: NSLayoutConstraint, view: UIView) {
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.4) {
             buttonTopConstraint.constant += 60
             view.layoutIfNeeded()
         }
