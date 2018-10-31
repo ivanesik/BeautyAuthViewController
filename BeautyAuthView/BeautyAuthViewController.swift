@@ -14,7 +14,7 @@ enum Mode {
 }
 
 
-class BeautyAuthViewController: UIViewController {
+class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
 
 // MARK: - Props
     var mode: Mode = .signIn
@@ -25,11 +25,20 @@ class BeautyAuthViewController: UIViewController {
     @IBOutlet var signInLeftConstraint: NSLayoutConstraint!
     @IBOutlet var signUpLeftConstraint: NSLayoutConstraint!
     
+    @IBOutlet var backgroundImageView: UIImageView!
+    @IBOutlet var backgroundImageHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet var signInUserNameTextField: UITextField!
+    @IBOutlet var signInPasswordTextField: UITextField!
+    
     
 // MARK: - Initialization
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
+        signInUserNameTextField.delegate = self
+        signInPasswordTextField.delegate = self
     }
     
     func setupView() {
@@ -53,6 +62,29 @@ class BeautyAuthViewController: UIViewController {
             Animations.animateSetUnactiveMode(button: singInButton, leftConstraint: signInLeftConstraint, view: self.view)
             mode = .signUp
         }
+    }
+    
+    @IBAction func viewTap(sender: UIControl) {
+        signInUserNameTextField.resignFirstResponder()
+        signInPasswordTextField.resignFirstResponder()
+    }
+    
+// MARK: - TextField Delegate
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        UIView.animate(withDuration: 0.3) {
+            self.backgroundImageHeightConstraint.constant = 600
+            self.view.layoutIfNeeded()
+        }
+        return true
+    }
+    
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        UIView.animate(withDuration: 0.3) {
+            self.backgroundImageHeightConstraint.constant = 300
+            self.view.layoutIfNeeded()
+        }
+        return true
     }
     
 
