@@ -30,8 +30,6 @@ class ConfirmViewController: UIViewController {
     @IBAction func backButtonTap(){
         self.navigationController?.popViewController(animated: true)
     }
-    
-
 
 }
 

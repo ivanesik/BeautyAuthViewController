@@ -66,10 +66,12 @@ class BeautyAuthViewController: UIViewController {
     }
     
     func setupView() {
-        singUpButton.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-        singUpButton.titleLabel?.textColor = UIColor(red: 119.00/255.00, green: 119.00/255.00, blue: 119.00/255.00, alpha: 1)
-        for textfield in singUpTextFields {
-            textfield.textField.alpha = 0
+        if mode == .signIn {
+            singUpButton.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            singUpButton.titleLabel?.textColor = UIColor(red: 119.00/255.00, green: 119.00/255.00, blue: 119.00/255.00, alpha: 1)
+            for textfield in singUpTextFields {
+                textfield.textField.alpha = 0
+            }
         }
     }
 
@@ -96,6 +98,12 @@ class BeautyAuthViewController: UIViewController {
             Animations.animateTextFieldsLeaving(textfields: singInTextFields, view: self.view)
             Animations.animateEnterButtonDown(buttonTopConstraint: enterButtonTopConstarain, view: self.view)
             mode = .signUp
+        }
+    }
+    
+    @IBAction func enterButtonTap(sender: UIButton) {
+        if mode == .signUp {
+            performSegue(withIdentifier: "RestoreSegue", sender: nil)
         }
     }
     
