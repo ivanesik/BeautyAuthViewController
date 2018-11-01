@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		84381E56218973A600D5BEA8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 84381E55218973A600D5BEA8 /* README.md */; };
+		843915A2218AD3AC00496E9C /* addConstraintsWithFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843915A1218AD3AC00496E9C /* addConstraintsWithFormat.swift */; };
+		843915AD218AF5FB00496E9C /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843915AC218AF5FB00496E9C /* ConfirmViewController.swift */; };
 		84570AB321886B8B00438A7E /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84570AB221886B8B00438A7E /* Animations.swift */; };
 		84F7AE042189D80D00DF6EBA /* Documents in Resources */ = {isa = PBXBuildFile; fileRef = 84F7AE032189D80D00DF6EBA /* Documents */; };
 		84F954CF218864E100E747AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F954CE218864E100E747AB /* AppDelegate.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		84381E55218973A600D5BEA8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		843915A1218AD3AC00496E9C /* addConstraintsWithFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addConstraintsWithFormat.swift; sourceTree = "<group>"; };
+		843915AC218AF5FB00496E9C /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		84570AB221886B8B00438A7E /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		84F7AE032189D80D00DF6EBA /* Documents */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documents; sourceTree = "<group>"; };
 		84F954CB218864E100E747AB /* BeautyAuthView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyAuthView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +45,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8439159B218AC85F00496E9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				843915AB218AF5CB00496E9C /* Authentifacation */,
+				8439159C218AC87000496E9C /* Help */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8439159C218AC87000496E9C /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				843915A3218AD3C400496E9C /* Extension */,
+				84570AB221886B8B00438A7E /* Animations.swift */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		843915A3218AD3C400496E9C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				843915A1218AD3AC00496E9C /* addConstraintsWithFormat.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		843915AB218AF5CB00496E9C /* Authentifacation */ = {
+			isa = PBXGroup;
+			children = (
+				84F954D0218864E100E747AB /* BeautyAuthViewController.swift */,
+				843915AC218AF5FB00496E9C /* ConfirmViewController.swift */,
+			);
+			path = Authentifacation;
+			sourceTree = "<group>";
+		};
 		84F954C2218864E100E747AB = {
 			isa = PBXGroup;
 			children = (
@@ -62,10 +101,9 @@
 		84F954CD218864E100E747AB /* BeautyAuthView */ = {
 			isa = PBXGroup;
 			children = (
-				84F954CE218864E100E747AB /* AppDelegate.swift */,
-				84570AB221886B8B00438A7E /* Animations.swift */,
-				84F954D0218864E100E747AB /* BeautyAuthViewController.swift */,
+				8439159B218AC85F00496E9C /* Views */,
 				84F954D2218864E100E747AB /* Main.storyboard */,
+				84F954CE218864E100E747AB /* AppDelegate.swift */,
 				84F954D5218864E300E747AB /* Assets.xcassets */,
 				84F954D7218864E300E747AB /* LaunchScreen.storyboard */,
 				84F954DA218864E300E747AB /* Info.plist */,
@@ -146,6 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843915AD218AF5FB00496E9C /* ConfirmViewController.swift in Sources */,
+				843915A2218AD3AC00496E9C /* addConstraintsWithFormat.swift in Sources */,
 				84F954D1218864E100E747AB /* BeautyAuthViewController.swift in Sources */,
 				84F954CF218864E100E747AB /* AppDelegate.swift in Sources */,
 				84570AB321886B8B00438A7E /* Animations.swift in Sources */,

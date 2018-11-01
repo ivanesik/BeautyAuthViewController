@@ -31,7 +31,6 @@ class Animations {
         }
     }
     
-    
     static func animateTextFieldsUprise(textfields: [TextFieldTop], view: UIView) {
         var durationCount: Double = 0
         for textfield in textfields {

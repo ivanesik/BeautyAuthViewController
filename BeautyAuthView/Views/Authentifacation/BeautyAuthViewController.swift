@@ -14,7 +14,7 @@ enum Mode {
 }
 
 
-class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
+class BeautyAuthViewController: UIViewController {
 
 // MARK: - Props
     var mode: Mode = .signIn
@@ -62,6 +62,7 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         setupView()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     func setupView() {
@@ -102,23 +103,6 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
         closeKeyBoard()
     }
     
-// MARK: - TextField Delegate
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        UIView.animate(withDuration: 0.3) {
-            self.backgroundImageHeightConstraint.constant = 600
-            self.view.layoutIfNeeded()
-        }
-        return true
-    }
-    
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        UIView.animate(withDuration: 0.3) {
-            self.backgroundImageHeightConstraint.constant = 300
-            self.view.layoutIfNeeded()
-        }
-        return true
-    }
     
 // MARK: - Help
     private func closeKeyBoard(){
@@ -128,7 +112,26 @@ class BeautyAuthViewController: UIViewController, UITextFieldDelegate {
         signUpPasswordTextField.resignFirstResponder()
         signUpConfirmPasswordTextField.resignFirstResponder()
     }
-    
+}
 
+
+// MARK: - TextField Delegate
+extension BeautyAuthViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.3) {
+            self.backgroundImageHeightConstraint.constant = 600
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        UIView.animate(withDuration: 0.3) {
+            self.backgroundImageHeightConstraint.constant = 300
+            self.view.layoutIfNeeded()
+        }
+        return true
+    }
 }
 
