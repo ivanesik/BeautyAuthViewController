@@ -3,4 +3,7 @@
 
 This is example of realization of Authentidication View with swift for Ios
 
-![](./Documents/show.gif =300x)
+<p align="center">
+    <img src="Documents/authView.gif" />
+</p>
+
