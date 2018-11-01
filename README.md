@@ -1,7 +1,7 @@
 # BeautyAuthViewController
 
 
-This is example of realization of Authentidication View with swift for Ios
+This is example of Swift realization of AuthenticationView for iOS
 
 <p align="center">
     <img src="Documents/authView.gif" />
