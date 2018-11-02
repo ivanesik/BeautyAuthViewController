@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountins" translatesAutoresizingMaskIntoConstraints="NO" id="Xyn-dI-q7X">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountins" translatesAutoresizingMaskIntoConstraints="NO" id="Xyn-dI-q7X">
                                 <rect key="frame" x="0.0" y="372" width="375" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="PaL-T2-FHK"/>
@@ -241,14 +241,14 @@
                                     <action selector="enterButtonTapWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ug-R9-8yh"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pass1" translatesAutoresizingMaskIntoConstraints="NO" id="U2J-xb-Rjl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="U2J-xb-Rjl">
                                 <rect key="frame" x="203" y="62" width="47" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="47" id="OHG-fB-JTr"/>
                                     <constraint firstAttribute="height" constant="36" id="eRQ-KJ-jN3"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountins" translatesAutoresizingMaskIntoConstraints="NO" id="haQ-6c-JyD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountins" translatesAutoresizingMaskIntoConstraints="NO" id="haQ-6c-JyD">
                                 <rect key="frame" x="0.0" y="367" width="375" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Jvc-mW-Zgg"/>
@@ -291,7 +291,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountins" translatesAutoresizingMaskIntoConstraints="NO" id="GDv-op-epI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountins" translatesAutoresizingMaskIntoConstraints="NO" id="GDv-op-epI">
                                 <rect key="frame" x="0.0" y="367" width="375" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="7rp-qt-omL"/>
@@ -426,9 +426,9 @@
     </scenes>
     <resources>
         <image name="ico-facebook" width="128" height="128"/>
-        <image name="ico-instagram" width="512" height="512"/>
-        <image name="mail" width="1000" height="478"/>
-        <image name="mountins" width="7360" height="4912"/>
-        <image name="pass1" width="968" height="767"/>
+        <image name="ico-instagram" width="250" height="250"/>
+        <image name="mail" width="500" height="239"/>
+        <image name="mountins" width="2000" height="1335"/>
+        <image name="password" width="968" height="767"/>
     </resources>
 </document>
