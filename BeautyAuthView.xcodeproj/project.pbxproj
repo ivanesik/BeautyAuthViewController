@@ -11,6 +11,7 @@
 		843915A2218AD3AC00496E9C /* addConstraintsWithFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843915A1218AD3AC00496E9C /* addConstraintsWithFormat.swift */; };
 		843915AD218AF5FB00496E9C /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843915AC218AF5FB00496E9C /* ConfirmViewController.swift */; };
 		84570AB321886B8B00438A7E /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84570AB221886B8B00438A7E /* Animations.swift */; };
+		8474856D2192A91400BE4CED /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8474856C2192A91400BE4CED /* LICENSE */; };
 		84F7AE042189D80D00DF6EBA /* Documents in Resources */ = {isa = PBXBuildFile; fileRef = 84F7AE032189D80D00DF6EBA /* Documents */; };
 		84F7B566218B1BFE00DEB3E0 /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7B565218B1BFE00DEB3E0 /* RestoreViewController.swift */; };
 		84F954CF218864E100E747AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F954CE218864E100E747AB /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 		843915A1218AD3AC00496E9C /* addConstraintsWithFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addConstraintsWithFormat.swift; sourceTree = "<group>"; };
 		843915AC218AF5FB00496E9C /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		84570AB221886B8B00438A7E /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		8474856C2192A91400BE4CED /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		84F7AE032189D80D00DF6EBA /* Documents */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documents; sourceTree = "<group>"; };
 		84F7B565218B1BFE00DEB3E0 /* RestoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
 		84F954CB218864E100E747AB /* BeautyAuthView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyAuthView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 				84F954CC218864E100E747AB /* Products */,
 				84F7AE032189D80D00DF6EBA /* Documents */,
 				84381E55218973A600D5BEA8 /* README.md */,
+				8474856C2192A91400BE4CED /* LICENSE */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8474856D2192A91400BE4CED /* LICENSE in Resources */,
 				84F954D9218864E300E747AB /* LaunchScreen.storyboard in Resources */,
 				84F954D6218864E300E747AB /* Assets.xcassets in Resources */,
 				84381E56218973A600D5BEA8 /* README.md in Resources */,
