@@ -6,14 +6,12 @@ This is example of Swift realization of AuthenticationView for iOS
 <table>
     <tr>
         <td>
-            <img src="Documents/storyboard.png" />
+            <img src="Documents/storyboard.png" height="500px" />
         </td>
         <td>
-            <p align="center">
-                <kbd>
-                    <img width="150" src="Documents/authView.gif" />
-                </kbd>
-            </p>
+            <kbd>
+                <img src="Documents/authView.gif" height="450px" />
+            </kbd>
         </td>
     </tr>
 </table>
