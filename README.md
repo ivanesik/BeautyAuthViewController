@@ -10,14 +10,10 @@ This is example of Swift realization of AuthenticationView for iOS
         </td>
         <td>
             <kbd>
-                <img src="Documents/authView.gif" height="450px" />
+                <video src="Documents/BeautyAuth.mov"  autoplay="autoplay" loop height="450px"></video>
             </kbd>
         </td>
     </tr>
 </table>
-
-
-
-
 
 
