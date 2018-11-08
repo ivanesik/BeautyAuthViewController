@@ -8,4 +8,9 @@ This is example of Swift realization of AuthenticationView for iOS
 </p>
 
 
-View example how it works on iPhone  |![img](Documents/authView.gif){width=150px}
+
+<p align="center">
+    <kbd>
+        <img width="150" src="Documents/authView.gif" />
+    </kbd>
+</p>
